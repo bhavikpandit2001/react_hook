@@ -1,4 +1,4 @@
-
+import React from 'react';
 import './App.css';
 //import UseeffectHook from './components/Useeffecthook1';
 // import Classcounter from './components/Classcounter';
@@ -10,9 +10,15 @@ import './App.css';
 // import UseeffectHook2 from './components/Useeffecthook2';
 //import Useeffecthook3 from './components/Useeffecthook3';
 //import UseeffectHook4 from './components/Useeffecthook4';
-import UseeffectHook5 from './components/Useeffecthook5';
-import ExU from './components/exU';
+// import UseeffectHook5 from './components/Useeffecthook5';
+// import ExU from './components/exU';
+import CompA from './components/CompA';
+
+export const Usercontext = React.createContext()
+export const Channelcontext = React.createContext()
+
 function App() {
+
   return (
     <div className="App">
       <h2>react hook</h2>
@@ -25,8 +31,14 @@ function App() {
       {/* <UseeffectHook2/> */}
       {/* <Useeffecthook3/> */}
       {/* <UseeffectHook4/> */}
-      <UseeffectHook5/>
-      <ExU/>
+      {/* <UseeffectHook5/>
+      <ExU/> */}
+      <Usercontext.Provider value={'bhavik'}>
+        <Channelcontext.Provider value={'react hook'}>
+          <CompA />
+        </Channelcontext.Provider>
+      </Usercontext.Provider>
+
     </div>
   );
 }
