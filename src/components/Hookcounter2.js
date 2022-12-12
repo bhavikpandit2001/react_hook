@@ -5,7 +5,9 @@ function Hookcounter2(){
     const incrementfive = () =>{
         for(let i= 0; i<5; i++){
             setCount(prevCount => prevCount+1)
+            
         }
+        
     }
     return(
         <div>
