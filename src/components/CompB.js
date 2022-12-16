@@ -1,6 +1,6 @@
 import React from "react";
 import { useContext } from "react";
-import { Usercontext, Channelcontext } from "../App";
+import {Usercontext, Channelcontext } from '/App.js'
 //import CompC from "./CompC";
 
 function CompB(){

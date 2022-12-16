@@ -9,6 +9,12 @@ function Hookcounter2(){
         }
         
     }
+    const decrementFive = () =>{
+        for(let j = 0; j<5; j ++){
+            setCount(prevCount => prevCount - 1)
+        }
+        
+    }
     return(
         <div>
             <h2>usestate hook with previous hook</h2>
@@ -17,6 +23,7 @@ function Hookcounter2(){
             <button type="button" onClick={() => setCount(prevCount => prevCount+1)}>increment</button>
             <button type="button" onClick={() => setCount(prevCount => prevCount-1)}>decrement</button>
             <button onClick={incrementfive}>increment5</button>
+            <button onClick={decrementFive}>decrement5</button>
         </div>
     )
 }

@@ -1,10 +1,9 @@
-import { click } from "@testing-library/user-event/dist/click";
 import React from "react";
 import { useState } from "react";
 
 function Hookcounter3 (){
     const [name,setName] = useState({firstname: '', lastname: '',password: ''});
-    click = () =>{
+    const Click = () =>{
         console.log(name)
     }
     
@@ -16,10 +15,8 @@ function Hookcounter3 (){
             <label>lastname</label>
             <input type='text' value={name.lastname} onChange={e => setName({...name, lastname: e.target.value})}></input><br></br>
             <label>password</label>
-            <input type='password' value={name.password} onChange={e => setName({...name, password: e.target.value})}></input>
-            <p>first name: {name.firstname}</p>
-            <p>last name: {name.lastname}</p>
-            <button type="btn" onClick={click}>click</button>
+            <input type='password' value={name.password} onChange={e => setName({...name, password: e.target.value})}></input><br></br>
+            <button type="btn" onClick={Click}>click</button>
         </div>
     )
 }

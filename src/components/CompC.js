@@ -1,25 +1,25 @@
 import React from "react";
 import { Channelcontext, Usercontext } from "../App";
-function CompC(){
-    return(
+function CompC() {
+    return (
         <div>
             <h2>component c</h2>
             <Usercontext.Consumer>
                 {
-                    user =>{
+                    user => {
                         return (
                             <Channelcontext.Consumer>
                                 {
                                     channel => {
-                                        return(
+                                        return (
                                             <div> context value {user}, context channel :{channel}</div>
                                         )
                                     }
                                 }
                             </Channelcontext.Consumer>
                         )
+                    }
                 }
-            }
             </Usercontext.Consumer>
         </div>
     )

@@ -2,23 +2,24 @@ import React, { useState } from "react";
 function Hookcounter4() {
     const [items, setItem] = useState([])
     const AddItem = () => {
-        setItem(...items, {
+        setItem([...items, {
             id: items.length,
             value: Math.floor(Math.random() * 10) + 1
-        })
-        console.log("item added")
+        }])
+        console.log("item added", items)
     }
     return (
         <div>
             <h2>usestate hook with array</h2>
             <button type="btn" onClick={AddItem}>addnumber</button>
             <ul>
-                {items.map(item =>
+                {
+                items.map(item =>
                 (
                     <li key={item.id}>{item.value}</li>
                 )
                 )}
-            </ul>
+            </ul> 
         </div>
     )
 }
